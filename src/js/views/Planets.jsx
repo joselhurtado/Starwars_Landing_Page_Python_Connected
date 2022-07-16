@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Planets() {
+export default function PlanetsCard() {
   return (
-    <div>Planets</div>
+    <div>
+      <h1>Planets</h1>
+    </div>
   )
 }

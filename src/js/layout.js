@@ -2,14 +2,16 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./views/home.jsx";
+import { Home } from "./views/home";
 import injectContext from "./store/appContext";
+import { Demo } from "./views/demo.js";
+import { Single } from "./views/single.js";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import People from "./views/People.jsx";
-import Planets from "./views/Planets.jsx";
-import Vehicles from "./views/Vehicles.jsx";
+import PeopleCard from "./views/People.jsx";
+import PlanetsCard from "./views/Planets.jsx";
+import VehiclesCard from "./views/Vehicles.jsx";
 
 //create your first component
 const Layout = () => {
@@ -26,14 +28,22 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
+						<Route exact path="/demo">
+							<Demo />
+						</Route>
 
-						<Route exact path="/people/:theid"><People /></Route>
-						<Route exact path="/planets/:theid"><Planets /></Route>
-						<Route exact path="/vehicles/:theid"><Vehicles /></Route>
+						<Route exact path="/single/:theid">
+							<Single />
+						</Route>
+
+						<Route exact path="/people/:theid"><PeopleCard /></Route>
+						<Route exact path="/planets/:theid"><PlanetsCard /></Route>
+						<Route exact path="/vehicles/:theid"><VehiclesCard /></Route>
 
 						<Route>
-							<h1>Not found!</h1>
+							<h1 className="align-center" >Not found!</h1>
 						</Route>
+
 					</Switch>
 					<Footer />
 				</ScrollToTop>

@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Vehicles() {
+export default function VehiclesCard() {
   return (
-    <div>Vehicles</div>
+    <div>
+      <h1>Vehicles</h1>
+    </div>
   )
 }
