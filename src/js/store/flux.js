@@ -3,19 +3,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			demo: [
 				{
-					title: "FIRST",
+					title: "ONIONS",
 					background: "white",
 					initial: "white"
 				},
 				{
-					title: "SECOND",
+					title: "CARROTS",
 					background: "white",
 					initial: "white"
 				}
 			]
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
+			// Use getActions to call a function within a fuction (EXAMPLE)
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},

@@ -5,10 +5,9 @@ import NavLogo from "/src/img/star-wars-logo.png"
 export const Navbar = () => {
 	return (
 		<div className="container">
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar navbar-dark bg-dark p-3">
 			<Link to="/">
-				<img className="NavLogo" src={NavLogo} />
-				<span className="navbar-brand mb-0 h1"></span>
+				<img className="NavLogo" src={NavLogo} alt="Starwars Logo"/>
 			</Link>
 			<div className="ml-auto">
 				<Link to="/demo">
