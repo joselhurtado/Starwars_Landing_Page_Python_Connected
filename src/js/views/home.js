@@ -1,15 +1,21 @@
-import React from "react";
-import NavLogo from "/src/img/star-wars-logo.png"
+import React, { useState, useEffect } from "react";
 import "../../styles/home.css";
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>I'm your Father Page</h1>
-		<br />
-		<img src={ NavLogo } />
-	<br />
+import CharacterCard from "/src/js/component/CharacterCard";
+
+export const Home = () => {
+	const [characters, setCharacters] = useState([{name: "Luke Skywalker"}, {name: "C-3PO"}, {name: "R2-D2"}, {name: "Darth Vader"}, {name: "Leia Organa"}]);
+
+	return (
+	<div className="container-fluid mt-5">
+		
 		<div>
-		<h2>Card People</h2>
-		</div>
+			<h1>Characters Group</h1>
+			<div>
+			<CharacterCard />
+			</div>
+		</div>	
+
 	</div>
 );
+};
