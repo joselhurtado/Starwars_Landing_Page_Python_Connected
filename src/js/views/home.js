@@ -8,14 +8,15 @@ export const Home = () => {
 
 	return (
 	<div className="container-fluid mt-5">
-		
+
 		<div>
 			<h1>Characters Group</h1>
-			<div>
-			<CharacterCard />
+			<div className="d-flex">
+				{characters.map((value, index) => {
+					return 	<CharacterCard characters={value} key={index} />;
+			})}
 			</div>
 		</div>	
-
 	</div>
 );
 };
