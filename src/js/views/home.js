@@ -1,22 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../styles/home.css";
-
-import CharacterCard from "/src/js/component/CharacterCard";
+import CharacterGroup from "/src/js/component/CharactersGroup";
+import PlanetsGroup from "/src/js/component/PlanetsGroup";
+import VehiclesGroup from "/src/js/component/VehiclesGroup";
 
 export const Home = () => {
-	const [characters, setCharacters] = useState([{name: "Luke Skywalker"}, {name: "C-3PO"}, {name: "R2-D2"}, {name: "Darth Vader"}, {name: "Leia Organa"}]);
-
 	return (
-	<div className="container-fluid mt-5">
+	<div className="container text-center">
 
 		<div>
-			<h1>Characters Group</h1>
+			<h1 className="mt-4">Characters Group</h1>
 			<div className="d-flex">
-				{characters.map((value, index) => {
-					return 	<CharacterCard characters={value} key={index} />;
-			})}
+			<CharacterGroup />
 			</div>
 		</div>	
+
+		<div>
+			<h1 className="mt-4">Planets Group</h1>
+			<div className="d-flex">
+			<PlanetsGroup />
+			</div>
+		</div>
+
+		<div>
+			<h1 className="mt-4">Vehicles Group</h1>
+			<div className="d-flex">
+			<VehiclesGroup />
+			</div>
+		</div>
 	</div>
-);
-};
+)
+}

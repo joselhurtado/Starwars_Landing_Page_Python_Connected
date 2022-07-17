@@ -1,5 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #252525; 
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ffc107; 
+    border-radius: 10px;
+}
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffc107; 
+}
+
+body {
+    background: #000; 
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+}
+
 .NavLogo {
     width: 100px;
     height: auto;
     margin-left: 20px;
+}
+
+.charactersGroup {
+    margin-top: 100px !important;
 }
