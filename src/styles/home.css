@@ -12,6 +12,13 @@
     border-radius: 10px;
 }
 
+body {
+    background-image: url("https://raw.githubusercontent.com/joselhurtado/StarWars_LP_Using_React_RouterAPI/master/src/img/bg_stars.jpg") !important;
+    background-color: transparent !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
 .navbar {
     background-color: #000 !important;
 }
@@ -22,6 +29,12 @@ h1 {
     color: #fff;
 }
 
+h5 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+}
+
 .NavLogo {
     width: 100px;
     height: auto;
@@ -29,7 +42,7 @@ h1 {
 }
 
 .characterTitle {
-    margin-top: 130px !important;
+    margin-top: 25px !important;
 }
 
 .fa {
@@ -44,4 +57,13 @@ h1 {
 hr {
     border: 2px solid #FFF;
     border-radius: 25px;
+}
+
+#carouselExampleCaptions {
+    margin-top: 90px !important;
+}
+
+.carousel-item {
+    width: 100%;
+    max-height: 400px !important;
 }

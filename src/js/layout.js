@@ -7,11 +7,13 @@ import injectContext from "./store/appContext";
 import { Demo } from "./views/demo.js";
 import { Single } from "./views/single.js";
 
+
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import PeopleDetails from "./views/PeopleDetails";
 import PlanetsDetails from "./views/PlanetsDetails";
 import VehiclesDetails from "./views/VehiclesDetails";
+import { Hero } from "/src/js/component/hero";
 
 //create your first component
 const Layout = () => {
@@ -24,6 +26,9 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar/>
+					<div className="heroHeight">
+						<Hero />
+					</div>
 					<Switch>
 						<Route exact path="/">
 							<Home />

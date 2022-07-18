@@ -4,7 +4,7 @@ import CharacterCard from "/src/js/component/CharacterCard";
 
 const CharactersGroup = () => {
 	return (
-		<div className="d-flex overflow-auto m-4">
+		<div className="d-flex overflow-auto cardsGroup m-4">
             <div>
 			<CharacterCard />
 		    </div>
