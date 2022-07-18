@@ -9,7 +9,9 @@ export const Home = () => {
 	<div className="container text-center">
 
 		<div>
-			<h1 className="mt-4">Characters Group</h1>
+			<hr />
+			<h1 className="mt-4 characterTitle">Characters Group</h1>
+			<hr />
 			<div className="d-flex">
 			<CharacterGroup />
 			</div>
@@ -17,6 +19,8 @@ export const Home = () => {
 
 		<div>
 			<h1 className="mt-4">Planets Group</h1>
+			<hr />
+
 			<div className="d-flex">
 			<PlanetsGroup />
 			</div>
@@ -24,6 +28,7 @@ export const Home = () => {
 
 		<div>
 			<h1 className="mt-4">Vehicles Group</h1>
+			<hr />
 			<div className="d-flex">
 			<VehiclesGroup />
 			</div>

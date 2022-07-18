@@ -1,3 +1,6 @@
-/* 
-    General Styles
-*/
+body {
+    background-image: url("/workspace/StarWars_LP_Using_React_RouterAPI/src/img/bg_stars.jpg");
+    background: #303030; 
+    background-size: cover;
+    background-position: center;
+}

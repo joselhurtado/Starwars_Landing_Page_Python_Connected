@@ -2,14 +2,8 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-    background: #252525; 
-}
-  
-  /* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
+    width: 15px;
+    background: rgb(33,37,41); 
 }
 
   /* Handle */
@@ -18,13 +12,8 @@
     border-radius: 10px;
 }
 
-  /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #ffc107; 
-}
-
-body {
-    background: #000; 
+.navbar {
+    background-color: #000 !important;
 }
 
 h1 {
@@ -39,6 +28,20 @@ h1 {
     margin-left: 20px;
 }
 
-.charactersGroup {
-    margin-top: 100px !important;
+.characterTitle {
+    margin-top: 130px !important;
+}
+
+.fa {
+    align-self: center;
+    padding: 15px;
+}
+
+.footerLegal {
+    color: #fff;
+}
+
+hr {
+    border: 2px solid #FFF;
+    border-radius: 25px;
 }
