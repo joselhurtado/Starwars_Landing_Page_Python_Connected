@@ -1,37 +1,29 @@
 import React from "react";
 import "../../styles/home.css";
-import CharacterGroup from "/src/js/component/CharactersGroup";
-import PlanetsGroup from "/src/js/component/PlanetsGroup";
-import VehiclesGroup from "/src/js/component/VehiclesGroup";
-
+import CharacterCard from "/src/js/component/CharacterCard";
+import PlanetCard from "/src/js/component/PlanetCard";
 
 export const Home = () => {
 	return (
 		<div className="container text-center">
 			<div>
-				<h1 className="mt-4 characterTitle">Characters</h1>
 				<hr />
-				<div className="d-flex">
-				<CharacterGroup />
+				<h1>Characters</h1>
+				<hr />
+				<div>
+				<CharacterCard />
 				</div>
 			</div>	
 
 			<div>
-				<h1 className="mt-4">Planets</h1>
 				<hr />
-
-				<div className="d-flex">
-				<PlanetsGroup />
+				<h1>Planets</h1>
+				<hr />
+				<div>
+				<PlanetCard />
 				</div>
 			</div>
-
-			<div>
-				<h1 className="mt-4">Vehicles</h1>
-				<hr />
-				<div className="d-flex">
-				<VehiclesGroup />
-				</div>
-			</div>
+			
 		</div>
 )
 }

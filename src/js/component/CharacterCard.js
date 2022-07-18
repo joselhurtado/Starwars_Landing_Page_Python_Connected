@@ -15,15 +15,14 @@ export default function CharacterCard() {
     },[]);
 
     return (
-        <div>{characters.map((x,i) => 
-
-            <div key={i} className="card m-2" style={{minWidth: "16rem"}}>
+        <div className="d-flex overflow-auto">{characters.map((x,i) => 
+            <div key={i} className="card m-2" style={{minWidth: "18rem"}}>
                 <img src={People_0} className="card-img-top" alt="card Image" />
                     <div className="card-body">
                         <h4 className="card-title">{x.name}</h4>
                         <p className="card-text">{x.url}</p>                
                         <div className="d-flex justify-content-between">
-                            <a href="#" className="btn btn-outline-dark">Go somewhere</a>
+                            <a href={x.url} className="btn btn-outline-dark" target="_blank">URL Link</a>
                             <a href="#" className="btn btn-outline-dark fa fa-heart" />
                         </div>
                     </div>
