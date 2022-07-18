@@ -8,26 +8,6 @@ const CharactersGroup = () => {
             <div>
 			<CharacterCard />
 		    </div>
-
-            <div>
-			<CharacterCard />
-		    </div>
-
-            <div>
-			<CharacterCard />
-		    </div>
-
-            <div>
-			<CharacterCard />
-		    </div>
-
-            <div>
-			<CharacterCard />
-		    </div>
-
-            <div>
-			<CharacterCard />
-		    </div>
         </div>
 )
 }
