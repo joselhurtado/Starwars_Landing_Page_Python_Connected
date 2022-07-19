@@ -7,7 +7,7 @@ import Hero3 from "/src/img/vr-hero-desktop_3.webp";
 
 export const Hero = () => {
 	return (
-        <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleCaptions" className="carousel slide container" data-bs-ride="carousel">
             
         <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -17,7 +17,7 @@ export const Hero = () => {
 
         <div className="carousel-inner">
             <div className="carousel-item active">
-            <img src={Hero1} className="d-block w-100" alt="..." />
+            <img src={Hero1} className="d-block heroImage" alt="..." />
             <div className="carousel-caption d-none d-md-block m-4">
                 <h5>DARK VADER</h5>
                 <p>Some representative placeholder content for the first slide.</p>
@@ -30,7 +30,7 @@ export const Hero = () => {
             </div>
 
             <div className="carousel-item">
-            <img src={Hero2} className="d-block w-100" alt="..." />
+            <img src={Hero2} className="d-block heroImage" alt="..." />
             <div className="carousel-caption d-none d-md-block m-4">
                 <h5>YODA JEDI MASTER</h5>
                 <p>Some representative placeholder content for the second slide.</p>
@@ -43,7 +43,7 @@ export const Hero = () => {
             </div>
 
             <div className="carousel-item">
-            <img src={Hero3} className="d-block w-100" alt="..." />
+            <img src={Hero3} className="d-block heroImage" alt="..." />
             <div className="carousel-caption d-none d-md-block m-4">
                 <h5>STORMTROOPERS</h5>
                 <p>Some representative placeholder content for the third slide.</p>

@@ -69,7 +69,17 @@ hr {
 
 .carousel-item {
     width: 100%;
-    max-height: 400px !important;
+    max-height: 500px !important;
+    
+}
+
+.heroImage {
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: fill !important;
+    position: relative;
+    width: 100%;
+
 }
 
 .cardShape {
@@ -111,10 +121,17 @@ hr {
     line-height: normal;
 }
 
-.footerImage {
-    background-image: url("https://raw.githubusercontent.com/joselhurtado/StarWars_LP_Using_React_RouterAPI/master/src/img/vader_footer.jpeg") !important;
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    background-repeat: no-repeat;
+.footerContainer {
+    position: relative;
+    text-align: center;
+    background-color: #000;
+    border-top: 2px solid #343a40;
+    margin-top: 50px;
+}
+
+.centeredFooter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
