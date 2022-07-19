@@ -1,11 +1,11 @@
 //Fetch All Characters
 export async function getAllCharacters() {
     const response = await fetch(
-        "https://swapi.py4e.com/api/people"
+        "https://akabab.github.io/starwars-api/api/all.json"
     );
     const payload = await response.json();
 
-    return payload.results
+    return payload
 }
 
 //Fetch All Planets
