@@ -18,9 +18,12 @@ export default function CharacterCard() {
         <div className="d-flex overflow-auto">{characters.map((x,i) => 
             <div key={i} className="card m-2" style={{minWidth: "18rem"}}>
                 <img src={People_0} className="card-img-top" alt="card Image" />
-                    <div className="card-body">
+                    <div className="card-body text-left">
                         <h4 className="card-title">{x.name}</h4>
-                        <p className="card-text">{x.url}</p>                
+                        <p className="card-text">Height: {x.height}</p>  
+                        <p className="card-text">Skin Color: {x.skin_color}</p>  
+                        <p className="card-text">Birthday: {x.birth_year}</p>
+                        <br />                  
                         <div className="d-flex justify-content-between">
                             <a href={x.url} className="btn btn-outline-dark" target="_blank">URL Link</a>
                             <a href="#" className="btn btn-outline-dark fa fa-heart" />

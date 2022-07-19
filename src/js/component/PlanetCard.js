@@ -20,7 +20,10 @@ export default function PlanetCard() {
                 <img src={Planets_0} className="card-img-top" alt="card Image" />
                     <div className="card-body">
                         <h4 className="card-title">{x.name}</h4>
-                        <p className="card-text">{x.url}</p>                
+                        <p className="card-text">Diameter: {x.diameter}</p>  
+                        <p className="card-text">Gravity: {x.gravity}</p>  
+                        <p className="card-text">Population: {x.population}</p>
+                        <br />                  
                         <div className="d-flex justify-content-between">
                             <a href={x.url} className="btn btn-outline-dark" target="_blank">URL Link</a>
                             <a href="#" className="btn btn-outline-dark fa fa-heart" />
