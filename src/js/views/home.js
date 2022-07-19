@@ -8,8 +8,8 @@ export const Home = () => {
 	return (
 		<div className="container">
 			<div>
-				<hr />
-				<h1 className="text-center">Characters</h1>
+				<br />
+				<h1 className="text-start text-warning">Characters</h1>
 				<hr />
 				<div>
 				<CharacterCard />
@@ -17,8 +17,8 @@ export const Home = () => {
 			</div>	
 
 			<div>
-				<hr />
-				<h1 className="text-center">Planets</h1>
+			<br />
+				<h1 className="text-start text-warning">Planets</h1>
 				<hr />
 				<div>
 				<PlanetCard />
@@ -26,8 +26,8 @@ export const Home = () => {
 			</div>
 
 			<div>
-				<hr />
-				<h1 className="text-center">Vehicles</h1>
+				<br />
+				<h1 className="text-start text-warning">Vehicles</h1>
 				<hr />
 				<div>
 				<VehicleCard />
