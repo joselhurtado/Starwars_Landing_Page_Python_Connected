@@ -1,5 +1,7 @@
 # StarWars LP Using React RouterAPI
 
+<img src="/src/img/StarWars_Using_React_RouterAPI.png">
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
 
 <p align="center">
