@@ -23,6 +23,10 @@ body {
     background-color: #000 !important;
 }
 
+.titles {
+    margin-top: 50px;
+}
+
 h1 {
     font-family: 'Russo One', sans-serif;
     font-size: 3rem;
@@ -68,17 +72,39 @@ hr {
     max-height: 400px !important;
 }
 
-.characterImageTop {
-    width: 100%; 
+.cardShape {
+    background-color: #000;
+    border: 2px solid #ffc107;
+    border-radius: 25px;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-bottom: 30px !important;
+}
+
+.shapeImageTop {
+    margin-top: 20px;
+    width: 300px; 
     height: 300px; 
     object-fit: cover;
     object-position: 20% 5%;
-    
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #ffc107;
 }
 
 .card-title {
     font-family: 'Russo One', sans-serif;
     font-size: 1.5rem;
+}
+
+.card-body {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 1px !important;
 }
 
 .card-text {

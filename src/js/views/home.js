@@ -9,7 +9,7 @@ export const Home = () => {
 		<div className="container">
 			<div>
 				<br />
-				<h1 className="text-start text-warning">Characters</h1>
+				<h1 className="text-start titles text-warning">Characters</h1>
 				<hr />
 				<div>
 				<CharacterCard />
@@ -18,7 +18,7 @@ export const Home = () => {
 
 			<div>
 			<br />
-				<h1 className="text-start text-warning">Planets</h1>
+				<h1 className="text-start titles text-warning">Planets</h1>
 				<hr />
 				<div>
 				<PlanetCard />
@@ -27,7 +27,7 @@ export const Home = () => {
 
 			<div>
 				<br />
-				<h1 className="text-start text-warning">Vehicles</h1>
+				<h1 className="text-start titles text-warning">Vehicles</h1>
 				<hr />
 				<div>
 				<VehicleCard />

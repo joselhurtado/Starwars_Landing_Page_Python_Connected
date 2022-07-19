@@ -16,17 +16,17 @@ export default function VehicleCard() {
 
     return (
         <div className="d-flex overflow-auto">{vehicles.map((x,i) => 
-            <div key={i} className="card m-2" style={{minWidth: "18rem"}}>
-                <img src={Vehicles_0} className="card-img-top" alt="card Image" />
-                    <div className="card-body">
+            <div key={i} className="card m-2 cardShape" style={{minWidth: "18rem"}}>
+                <img src={Vehicles_0} className="card-img-top shapeImageTop" alt="card Image" />
+                    <div className="card-body text-light">
                         <h4 className="card-title">{x.name}</h4>
                         <p className="card-text">Model: {x.model}</p>  
                         <p className="card-text">Passengers: {x.passengers}</p>  
                         <p className="card-text">Class: {x.vehicle_class}</p>
                         <br />                  
                         <div className="d-flex justify-content-between">
-                            <a href={x.url} className="btn btn-outline-dark" target="_blank">URL Link</a>
-                            <a href="#" className="btn btn-outline-dark fa fa-heart" />
+                        <a href={x.url} className="btn btn-warning" target="_blank">URL Wiki Link</a>
+                        <a href="#" className="btn btn-outline-warning fa fa-heart" />
                         </div>
                     </div>
             </div>
