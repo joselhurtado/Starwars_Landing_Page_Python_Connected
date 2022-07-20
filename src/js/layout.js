@@ -13,7 +13,6 @@ import { Footer } from "./component/footer";
 import CharacterDetails from "/src/js/component/CharacterDetails";
 import PlanetDetails from "/src/js/component/PlanetDetails";
 import VehicleDetails from "/src/js/component/VehicleDetails";
-import { Hero } from "/src/js/component/hero";
 
 //create your first component
 const Layout = () => {
@@ -26,9 +25,6 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar/>
-					<div className="heroHeight">
-						<Hero />
-					</div>
 					<Switch>
 						<Route exact path="/">
 							<Home />

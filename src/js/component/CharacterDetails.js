@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Character_0 from "/src/img/characters/Character_0.jpeg";
 import { getSingleCharacters } from "./API";
+import { Link } from "react-router-dom";
+
 
 export default function SingleCharacterCard() {
     
@@ -33,6 +35,19 @@ export default function SingleCharacterCard() {
                 </div>
                 </div>
             </div>
+            </div>
+            <div className="d-flex justify-content-between p-2">
+                <div className="btn btn-outline-warning">
+					<Spam className="fa fa-caret-left"></Spam>
+                    <Spam>Previous</Spam>
+				</div>
+                <div className="btn btn-warning">
+					Back to Home
+				</div>
+                <div className="btn btn-outline-warning">
+                    <Spam>Next</Spam>
+					<Spam className="fa fa-caret-right"></Spam>
+				</div>
             </div>
         </div>
     );
