@@ -1,13 +1,12 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
+			demo:
 				{
-					title: "ONIONS",
-					background: "white",
-					initial: "white"
+					characterData: null,
+					planetData: null,
+					vehicle: null
 				},
-			]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction (EXAMPLE)

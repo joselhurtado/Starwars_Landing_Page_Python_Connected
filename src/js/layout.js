@@ -10,9 +10,9 @@ import { Single } from "./views/single.js";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import PeopleDetails from "./views/PeopleDetails";
-import PlanetsDetails from "./views/PlanetsDetails";
-import VehiclesDetails from "./views/VehiclesDetails";
+import CharacterDetails from "/src/js/component/CharacterDetails";
+import PlanetDetails from "/src/js/component/PlanetDetails";
+import VehicleDetails from "/src/js/component/VehicleDetails";
 import { Hero } from "/src/js/component/hero";
 
 //create your first component
@@ -41,9 +41,9 @@ const Layout = () => {
 							<Single />
 						</Route>
 
-						<Route exact path="/people/:theid"><PeopleDetails /></Route>
-						<Route exact path="/planets/:theid"><PlanetsDetails /></Route>
-						<Route exact path="/vehicles/:theid"><VehiclesDetails /></Route>
+						<Route exact path="/character/:theid"><CharacterDetails /></Route>
+						<Route exact path="/planet/:theid"><PlanetDetails /></Route>
+						<Route exact path="/vehicle/:theid"><VehicleDetails /></Route>
 
 						<Route>
 							<h1 className="align-center" >Not found!</h1>

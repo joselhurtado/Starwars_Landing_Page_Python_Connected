@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getAllPlanets } from "./API";
 import Planets_0 from "/src/img/planets/Planets_0.jpeg";
+import { Link } from "react-router-dom";
+
 
 export default function PlanetCard() {
     const [planets, setPlanets] = useState([]); //UseEffect run the function from Planets (API)
@@ -25,7 +27,9 @@ export default function PlanetCard() {
                         <p className="card-text">Population: {x.population}</p>
                         <br />                  
                         <div className="d-flex justify-content-between">
-                        <a href={x.url} className="btn btn-warning" target="_blank">URL Wiki Link</a>
+                        <Link to={`/planet/${x.id}`} className="btn btn-warning">
+                        Read More
+                        </Link>
                         <a href="#" className="btn btn-outline-warning fa fa-heart" />
                         </div>
                     </div>

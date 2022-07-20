@@ -25,9 +25,10 @@ export default function CharacterCard() {
                         <p className="card-text">Born: {x.born}</p>  
                         <p className="card-text">Species: {x.species}</p>
                         <div className="d-flex justify-content-between">
-                        <Link to={`/people/${x.id}`} className="btn btn-warning">
+                        <Link to={`/character/${x.id}`} className="btn btn-warning">
                         Read More
                         </Link>
+                        <a href="#" className="btn btn-outline-warning fa fa-heart" />
                         </div>
                     </div>
             </div>

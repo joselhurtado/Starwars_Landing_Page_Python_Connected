@@ -19,6 +19,18 @@ body {
     background-attachment: fixed !important;
 }
 
+.fillImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fillImage img {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%
+}
+
 .navbar {
     background-color: #000 !important;
 }
@@ -63,19 +75,15 @@ hr {
     border-radius: 25px;
 }
 
-#heroSection {
-    
-}
-
-/* #carouselExampleCaptions {
+#carouselExampleCaptions {
     margin-top: 90px !important;
 }
 
 .carousel-item {
     width: 100%;
-    max-height: 500px !important;
+    max-height: 425px !important;
     
-} */
+}
 
 .heroImage {
     background-position: center !important;
@@ -83,30 +91,33 @@ hr {
     background-size: fill !important;
     position: relative;
     width: 100%;
-
 }
 
 .cardShape {
     background-color: #000;
-    border: 2px solid #ffc107;
+    border: 1px solid #ffc107;
     border-radius: 25px;
-    border-top-right-radius: 200px;
-    border-top-left-radius: 200px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 130px;
+    border-top-left-radius: 130px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     margin-bottom: 30px !important;
 }
 
 .shapeImageTop {
     margin-top: 20px;
-    width: 300px; 
+    width: 320px; 
     height: 300px; 
     object-fit: cover;
     object-position: 20% 5%;
     border-radius: 100%;
+    border-top-right-radius: 110px;
+    border-top-left-radius: 110px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid #ffc107;
+    background-color: #252525;
 }
 
 .card-title {

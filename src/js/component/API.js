@@ -11,7 +11,7 @@ export async function getAllCharacters() {
 //Fetch Single Characters
 export async function getSingleCharacters(i) {
     const response = await fetch(
-        "https://akabab.github.io/starwars-api/api/all.json"
+        "https://akabab.github.io/starwars-api/api/all.json" + i
     );
     const payload = await response.json();
 

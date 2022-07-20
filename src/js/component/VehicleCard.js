@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getAllVehicles } from "./API";
 import Vehicles_0 from "/src/img/vehicles/Vehicles_0.jpeg";
+import { Link } from "react-router-dom";
+
 
 export default function VehicleCard() {
     const [vehicles, setVehicles] = useState([]); //UseEffect run the function from Vehicles (API)
@@ -25,7 +27,9 @@ export default function VehicleCard() {
                         <p className="card-text">Class: {x.vehicle_class}</p>
                         <br />                  
                         <div className="d-flex justify-content-between">
-                        <a href={x.url} className="btn btn-warning" target="_blank">URL Wiki Link</a>
+                        <Link to={`/vehicle/${x.id}`} className="btn btn-warning">
+                        Read More
+                        </Link>
                         <a href="#" className="btn btn-outline-warning fa fa-heart" />
                         </div>
                     </div>
