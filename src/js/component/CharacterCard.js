@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { getAllCharacters } from "./API";
-import People_0 from "/src/img/characters/Character_0.jpeg";
+import { Link } from "react-router-dom";
 
 export default function CharacterCard() {
-    const [characters, setCharacters] = useState([]); //UseEffect run the function from characters (API)
+    const [characters, setCharacters] = useState([]); //UseState run the function from characters (API)
 
     useEffect(() => {
         const fn = async () =>{
@@ -25,12 +25,12 @@ export default function CharacterCard() {
                         <p className="card-text">Born: {x.born}</p>  
                         <p className="card-text">Species: {x.species}</p>
                         <div className="d-flex justify-content-between">
-                            <a href={x.wiki} className="btn btn-warning" target="_blank">URL Wiki Link</a>
-                            <a href="#" className="btn btn-outline-warning fa fa-heart" />
+                        <Link to={`/people/${x.id}`} className="btn btn-warning">
+                        Read More
+                        </Link>
                         </div>
                     </div>
             </div>
-
         ) }</div>
     );
 }

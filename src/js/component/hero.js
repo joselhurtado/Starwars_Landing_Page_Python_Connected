@@ -7,7 +7,7 @@ import Hero3 from "/src/img/vr-hero-desktop_3.webp";
 
 export const Hero = () => {
 	return (
-        <div id="carouselExampleCaptions" className="carousel slide container" data-bs-ride="carousel">
+        <div id="heroSection" className="carousel slide container" data-bs-ride="carousel">
             
         <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
