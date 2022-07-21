@@ -8,15 +8,6 @@ export async function getAllCharacters() {
     return payload
 }
 
-//Fetch Single Characters
-export async function getSingleCharacters(i) {
-    const response = await fetch(
-        "https://akabab.github.io/starwars-api/api/all.json" + i
-    );
-    const payload = await response.json();
-
-    return payload.character
-}
 
 //Fetch All Planets
 export async function getAllPlanets() {

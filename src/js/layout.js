@@ -7,7 +7,6 @@ import injectContext from "./store/appContext";
 import { Demo } from "./views/demo.js";
 import { Single } from "./views/single.js";
 
-
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import CharacterDetails from "/src/js/component/CharacterDetails";

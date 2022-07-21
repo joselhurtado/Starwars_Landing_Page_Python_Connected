@@ -1,14 +1,19 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo:
-				{
-					characterData: null,
-					planetData: null,
-					vehicle: null
-				},
+				characterData: [],
+				planetData: [],
+				vehicleData: [],
 		},
 		actions: {
+			getAllCharacters: async () => { //New Function to Call Characters
+				const response = await fetch(
+					"https://akabab.github.io/starwars-api/api/all.json"
+				);
+				const payload = await response.json();
+				setStore({characterData:payload})
+			},
+
 			// Use getActions to call a function within a fuction (EXAMPLE)
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

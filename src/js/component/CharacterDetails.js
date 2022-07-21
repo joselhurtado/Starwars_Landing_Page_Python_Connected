@@ -1,11 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
+import { useParams } from "react-router-dom";
 import Character_0 from "/src/img/characters/Character_0.jpeg";
-import { getSingleCharacters } from "./API";
-import { Link } from "react-router-dom";
-
 
 export default function SingleCharacterCard() {
+    const {store} = useContext(Context);
+    const params = useParams();
+    const [character, setCharacter] = useState({});
     
+    useEffect(() => {
+        console.log(params.theid, "params");
+        const data = store.characterData.find(item => {
+            console.log(item, "Item");
+            if(item.id == params.theid){
+                return item;
+            }
+        })
+        setCharacter(data);
+        console.log(character, "character");
+    },[store.characterData])
+
+
     return (
         <div className="container">
             <br />
@@ -18,7 +33,7 @@ export default function SingleCharacterCard() {
                 </div>
                 <div className="col-md-8">
                 <div className="card-body">
-                    <h5 className="card-title text-dark">Card title</h5>
+                    <h5 className="card-title text-dark">{character?.name}</h5>
                     <p className="card-text">height: 1.72</p>
                     <p className="card-text">mass: 73</p>
                     <p className="card-text">gender: male</p>
@@ -38,15 +53,10 @@ export default function SingleCharacterCard() {
             </div>
             <div className="d-flex justify-content-between p-2">
                 <div className="btn btn-outline-warning">
-					<Spam className="fa fa-caret-left"></Spam>
-                    <Spam>Previous</Spam>
+					<spam className="fa fa-caret-left">Previous</spam>
 				</div>
                 <div className="btn btn-warning">
 					Back to Home
-				</div>
-                <div className="btn btn-outline-warning">
-                    <Spam>Next</Spam>
-					<Spam className="fa fa-caret-right"></Spam>
 				</div>
             </div>
         </div>
