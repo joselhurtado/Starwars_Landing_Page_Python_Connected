@@ -1,23 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { getAllVehicles } from "./API";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
 import Vehicles_0 from "/src/img/vehicles/Vehicles_0.jpeg";
 import { Link } from "react-router-dom";
 
 
 export default function VehicleCard() {
-    const [vehicles, setVehicles] = useState([]); //UseEffect run the function from Vehicles (API)
+    const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not used yet)
+    const [vehicles, setVehicles] = useState([]); //UseState run the function from Vehicles (API)
 
     useEffect(() => {
-        const fn = async () =>{
-            const apiVehicles = await getAllVehicles();
-
-            return setVehicles(apiVehicles);
-        }; 
-        fn();
-    },[]);
+        setVehicles(store.vehicleData)
+    }, [store.vehicleData] // In Here we call out again to keep stored the data on re-load the page
+    )
 
     return (
-        <div className="d-flex overflow-auto">{vehicles.map((x,i) => 
+        <div className="d-flex overflow-auto">{vehicles.length > 0 && vehicles.map((x,i) =>
             <div key={i} className="card m-2 cardShape" style={{minWidth: "18rem"}}>
                 <img src={Vehicles_0} className="card-img-top shapeImageTop" alt="card Image" />
                     <div className="card-body text-light">

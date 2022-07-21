@@ -1,51 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
+import { useParams } from "react-router-dom";
 import Planets_0 from "/src/img/planets/Planets_0.jpeg";
 
-
 export default function PlanetDetails() {
-  return (
-    <div className="container">
-        <br />
-        <h1>Single Planet</h1>
-        <hr />
-        <div className="card mb-3">
-        <div className="row g-0">
-            <div className="col-md-4 fillImage">
-            <img src={Planets_0} className="img-fluid rounded-start" alt="..." />
-            </div>
-            <div className="col-md-8">
-            <div className="card-body">
-                <h5 className="card-title text-dark">Card title</h5>
-                <p className="card-text">height: 1.72</p>
-                <p className="card-text">mass: 73</p>
-                <p className="card-text">gender: male</p>
-                <p className="card-text">homeworld: tatooine</p>
-                <p className="card-text">born: -19</p>
-                <p className="card-text">bornLocation: polis massa</p>
-                <p className="card-text">died: 34</p>
-                <p className="card-text">diedLocation: ahch-to</p>
-                <p className="card-text">species: human</p>
-                <p className="card-text">hairColor: blond</p>
-                <p className="card-text">eyeColor: blue</p>
-                <p className="card-text">skinColor: light</p>
-                <p className="card-text">cybernetics: Prosthetic right hand</p>
+    const {store} = useContext(Context);
+    const params = useParams();
+    const [planet, setPlanet] = useState({});
+    
+    useEffect(() => {
+        const data = store.planetData.find(item => {
+            if(item.id == params.theid){
+                return item;
+            }
+        })
+        setPlanet(data);
+        console.log(planet, "planet");
+    },[store.planetData])
+
+    return (
+        <div className="container">
+            <br />
+            <h1>{planet?.name}</h1>
+            <hr />
+            <div className="card mb-3 cardShapeSingle">
+            <div className="row g-0">
+                <div className="col-md-6 fillImage">
+                <img src={Planets_0} className="img-fluid shapeImageTopSingle" alt="planets Image" />
+                </div>
+                <div className="col-md-6">
+                <div className="card-body text-light">
+                    <h5 className="card-title text-light">{planet?.name} Details</h5>
+                    <p className="card-text text-light">Height: <strong>{planet?.rotation_period}</strong></p>
+                    <p className="card-text text-light">Mass: <strong>{planet?.orbital_period}</strong></p>
+                    <p className="card-text text-light">gender: <strong>{planet?.diameter}</strong></p>
+                    <p className="card-text text-light">Homeworld: <strong>{planet?.climate}</strong></p>
+                    <p className="card-text text-light">Born: <strong>{planet?.gravity}</strong></p>
+                    <p className="card-text text-light">Born Location: <strong>{planet?.terrain}</strong></p>
+                    <p className="card-text text-light">Died: <strong>{planet?.surface_water}</strong></p>
+                    <p className="card-text text-light">Died Location: <strong>{planet?.population}</strong></p>
+                    <br />
+                </div>
+                </div>
             </div>
             </div>
         </div>
-        </div>
-        <div className="d-flex justify-content-between p-2">
-                <div className="btn btn-outline-warning">
-					<Spam className="fa fa-caret-left"></Spam>
-                    <Spam>Previous</Spam>
-				</div>
-                <div className="btn btn-warning">
-					Back to Home
-				</div>
-                <div className="btn btn-outline-warning">
-                    <Spam>Next</Spam>
-					<Spam className="fa fa-caret-right"></Spam>
-				</div>
-            </div>
-    </div>
-);
+    );
 }

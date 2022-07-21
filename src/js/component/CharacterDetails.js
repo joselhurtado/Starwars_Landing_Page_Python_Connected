@@ -9,22 +9,19 @@ export default function SingleCharacterCard() {
     const [character, setCharacter] = useState({});
     
     useEffect(() => {
-        console.log(params.theid, "params");
         const data = store.characterData.find(item => {
-            console.log(item, "Item");
             if(item.id == params.theid){
                 return item;
             }
         })
         setCharacter(data);
-        console.log(character, "character");
+        console.log(character, "Character");
     },[store.characterData])
-
 
     return (
         <div className="container">
             <br />
-            <h1>Single Character</h1>
+            <h1>{character?.name}</h1>
             <hr />
             <div className="card mb-3 cardShapeSingle">
             <div className="row g-0">
@@ -33,7 +30,7 @@ export default function SingleCharacterCard() {
                 </div>
                 <div className="col-md-6">
                 <div className="card-body text-light">
-                    <h5 className="card-title text-light">{character?.name}</h5>
+                    <h5 className="card-title text-light">{character?.name} Details</h5>
                     <p className="card-text">Height: <strong>{character?.height}</strong></p>
                     <p className="card-text">Mass: <strong>{character?.mass}</strong></p>
                     <p className="card-text">gender: <strong>{character?.gender}</strong></p>

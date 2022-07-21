@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
+import { useParams } from "react-router-dom";
 import Vehicles_0 from "/src/img/vehicles/Vehicles_0.jpeg";
 
 
 export default function VehicleDetails() {
+    const {store} = useContext(Context);
+    const params = useParams();
+    const [vehicle, setVehicle] = useState({});
+    
+    useEffect(() => {
+        const data = store.vehicleData.find(item => {
+            if(item.id == params.theid){
+                return item;
+            }
+        })
+        setVehicle(data);
+        console.log(vehicle, "Vehicle");
+    },[store.vehicleData])
+
   return (
     <div className="container">
         <br />
-        <h1>Single Vehicle</h1>
+        <h1>{vehicle?.name}</h1>
         <hr />
         <div className="card mb-3">
         <div className="row g-0">
@@ -33,19 +49,7 @@ export default function VehicleDetails() {
             </div>
         </div>
         </div>
-        <div className="d-flex justify-content-between p-2">
-                <div className="btn btn-outline-warning">
-					<Spam className="fa fa-caret-left"></Spam>
-                    <Spam>Previous</Spam>
-				</div>
-                <div className="btn btn-warning">
-					Back to Home
-				</div>
-                <div className="btn btn-outline-warning">
-                    <Spam>Next</Spam>
-					<Spam className="fa fa-caret-right"></Spam>
-				</div>
-            </div>
+
     </div>
 );
 }

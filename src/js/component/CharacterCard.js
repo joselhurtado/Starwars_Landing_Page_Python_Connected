@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export default function CharacterCard() {
-    const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not called yet)
+    const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not used yet)
     const [characters, setCharacters] = useState([]); //UseState run the function from characters (API)
 
     useEffect(() => {

@@ -1,23 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { getAllPlanets } from "./API";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
 import Planets_0 from "/src/img/planets/Planets_0.jpeg";
 import { Link } from "react-router-dom";
 
 
 export default function PlanetCard() {
-    const [planets, setPlanets] = useState([]); //UseEffect run the function from Planets (API)
+    const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not called yet)
+    const [planet, setplanets] = useState([]); //UseState run the function from planets (API)
 
     useEffect(() => {
-        const fn = async () =>{
-            const apiPlanets = await getAllPlanets();
-
-            return setPlanets(apiPlanets);
-        }; 
-        fn();
-    },[]);
+        setplanets(store.planetData)
+    }, [store.planetData] // In Here we call out again to keep stored the data on re-load the page
+    )
 
     return (
-        <div className="d-flex overflow-auto">{planets.map((x,i) => 
+        <div className="d-flex overflow-auto">{planet.length > 0 && planet.map((x,i) =>  
             <div key={i} className="card m-2 cardShape" style={{minWidth: "18rem"}}>
                 <img src={Planets_0} className="card-img-top shapeImageTop" alt="card Image" />
                     <div className="card-body text-light">
@@ -27,7 +24,7 @@ export default function PlanetCard() {
                         <p className="card-text">Population: {x.population}</p>
                         <br />                  
                         <div className="d-flex justify-content-between">
-                        <Link to={`/planet/${x.id}`} className="btn btn-warning">
+                        <Link to={`/planet/${x.theid}`} className="btn btn-warning">
                         Read More
                         </Link>
                         <a href="#" className="btn btn-outline-warning fa fa-heart" />
