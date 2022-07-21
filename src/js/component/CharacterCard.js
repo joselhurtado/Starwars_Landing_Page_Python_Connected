@@ -3,24 +3,13 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export default function CharacterCard() {
-    const {store, actions} = useContext(Context);
+    const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not called yet)
     const [characters, setCharacters] = useState([]); //UseState run the function from characters (API)
-console.log(store.characterData);
 
     useEffect(() => {
         setCharacters(store.characterData)
-    }, [store.characterData]
-    ) 
-
-    // useEffect(() => {
-    //     const fn = async () =>{
-    //         const apiCharacters = await getAllCharacters();
-
-    //         return setCharacters(apiCharacters);
-    //     }; 
-    //     fn();
-    // },[]);
-
+    }, [store.characterData] // In Here we call out again to keep stored the data on re-load the page
+    )
 
     return (
         <div className="d-flex overflow-auto">{characters.length > 0 && characters.map((x,i) => 
@@ -35,7 +24,7 @@ console.log(store.characterData);
                         <Link to={`/character/${x.id}`} className="btn btn-warning">
                         Read More
                         </Link>
-                        <a href="#" className="btn btn-outline-warning fa fa-heart" />
+                        <a href={"#"} className="btn btn-outline-warning fa fa-heart" />
                         </div>
                     </div>
             </div>

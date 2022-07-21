@@ -127,6 +127,32 @@ hr {
     background-color: #252525;
 }
 
+.cardShapeSingle {
+    background-color: #000;
+    border: 1px solid #ffc107;
+    border-radius: 25px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 30px !important;
+}
+
+.shapeImageTopSingle {
+    width: 320px; 
+    height: 300px; 
+    object-fit: cover;
+    object-position: 20% 5%;
+    border-radius: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #252525;
+}
+
 .card-title {
     font-family: 'Russo One', sans-serif;
     font-size: 1.5rem;
