@@ -183,3 +183,13 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.dropdown-item:hover {
+    background-color: #ffc107 !important;
+    color:#000 !important;
+}
+
+.btn.btn-outline-warning {
+    background-color: #ffc107 !important;
+    color:#000 !important;
+}
