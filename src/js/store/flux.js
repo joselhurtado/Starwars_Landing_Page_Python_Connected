@@ -37,14 +37,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore(store)						//Save the Changes under Store (Update the State)
 			},
 
-			removeFavorites: (item) => {   			//Remove Favorites Function
-				const store = getStore();			
-				store.favorites.push(item)			
-				setStore(store)						
+			removeFavorites: index => {   			//Remove Favorites Function
+				const store = getStore();
+				let updatedList = store.favorites.filter(
+					(item, i) => index != i
+				);
+				setStore({favorites:updatedList})	
+			},					
 			
-			//* ABOVE THIS LINE LIVES THE NEW API ACTIONS CALLING OBJECTS *//
-		}
+		}	
 	};
 };
+
+//* ABOVE THIS LINE LIVES THE NEW API ACTIONS CALLING OBJECTS *//
 
 export default getState;

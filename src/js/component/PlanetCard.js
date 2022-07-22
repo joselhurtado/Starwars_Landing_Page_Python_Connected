@@ -24,10 +24,10 @@ export default function PlanetCard() {
                         <p className="card-text">Population: {x.population}</p>
                         <br />                  
                         <div className="d-flex justify-content-between">
-                        <Link to={`/planet/${x.url[x.url.length-2]}`} className="btn btn-warning">
+                        <Link to={`/planet/${x.id}`} className="btn btn-warning">
                         Read More
                         </Link>
-                        <a href="#" className="btn btn-outline-warning fa fa-heart" />
+                        <a onClick={() => actions.addFavorites(x)} className="btn btn-outline-warning fa fa-heart" />
                         </div>
                     </div>
             </div>

@@ -24,10 +24,10 @@ export default function VehicleCard() {
                         <p className="card-text">Class: {x.vehicle_class}</p>
                         <br />                  
                         <div className="d-flex justify-content-between">
-                        <Link to={`/vehicle/${x.url[x.url.length-2]}`} className="btn btn-warning">
+                        <Link to={`/vehicle/${x.id}`} className="btn btn-warning">
                         Read More
                         </Link>
-                        <a href="#" className="btn btn-outline-warning fa fa-heart" />
+                        <a onClick={() => actions.addFavorites(x)} className="btn btn-outline-warning fa fa-heart" />
                         </div>
                     </div>
             </div>
