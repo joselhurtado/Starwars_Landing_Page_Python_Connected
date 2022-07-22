@@ -20,7 +20,7 @@ export const Hero = () => {
             <img src={Hero1} className="d-block heroImage" alt="..." />
             <div className="carousel-caption d-none d-md-block m-4">
                 <h5>DARK VADER</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+                <p>No. I am your father!</p>
                 <Link to="/character/4">
 				<span className="btn btn-warning" href="#" role="button">
 					Discover

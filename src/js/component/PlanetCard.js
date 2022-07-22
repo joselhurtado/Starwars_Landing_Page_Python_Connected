@@ -10,6 +10,7 @@ export default function PlanetCard() {
 
     useEffect(() => {
         setplanets(store.planetData)
+        console.log(store.planetData, "store.planetData");
     }, [store.planetData] // In Here we call out again to keep stored the data on re-load the page
     )
 
@@ -24,7 +25,7 @@ export default function PlanetCard() {
                         <p className="card-text">Population: {x.population}</p>
                         <br />                  
                         <div className="d-flex justify-content-between">
-                        <Link to={`/planet/${x.theid}`} className="btn btn-warning">
+                        <Link to={`/planet/${x.url[x.url.length-2]}`} className="btn btn-warning">
                         Read More
                         </Link>
                         <a href="#" className="btn btn-outline-warning fa fa-heart" />

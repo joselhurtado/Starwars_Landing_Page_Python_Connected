@@ -10,13 +10,14 @@ export default function PlanetDetails() {
     
     useEffect(() => {
         const data = store.planetData.find(item => {
-            if(item.id == params.theid){
+            if(item.url[item.url.length-2] == params.theid){
                 return item;
             }
         })
         setPlanet(data);
-        console.log(planet, "planet");
+        console.log(data, "data");
     },[store.planetData])
+    console.log(store.planetData, "store.planetData");
 
     return (
         <div className="container">

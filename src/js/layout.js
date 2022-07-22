@@ -22,7 +22,7 @@ const Layout = () => {
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
-				<ScrollToTop>
+			<ScrollToTop>
 					<Navbar/>
 					<Switch>
 						<Route exact path="/">
