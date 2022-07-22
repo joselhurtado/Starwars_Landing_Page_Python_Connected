@@ -7,7 +7,7 @@ import injectContext from "./store/appContext";
 import { Demo } from "./views/demo.js";
 import { Single } from "./views/single.js";
 
-import { Navbar } from "./component/navbar";
+import { NavBar } from "./component/NavBar";
 import { Footer } from "./component/footer";
 import CharacterDetails from "/src/js/component/CharacterDetails";
 import PlanetDetails from "/src/js/component/PlanetDetails";
@@ -23,7 +23,7 @@ const Layout = () => {
 		<div>
 			<BrowserRouter basename={basename}>
 			<ScrollToTop>
-					<Navbar/>
+					<NavBar/>
 					<Switch>
 						<Route exact path="/">
 							<Home />

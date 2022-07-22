@@ -4,7 +4,7 @@ import CharacterCard from "/src/js/component/CharacterCard";
 import PlanetCard from "/src/js/component/PlanetCard";
 import VehicleCard from "/src/js/component/VehicleCard";
 import { Hero } from "/src/js/component/hero";
-import { Search } from "/src/js/component/search";
+import { SearchBar } from "/src/js/component/SearchBar";
 
 export const Home = () => {
 	return (
@@ -13,7 +13,7 @@ export const Home = () => {
 				<Hero />
 			</div>
 			<div>
-				<Search/>
+				<SearchBar/>
 			</div>
 			<div>
 				<h1 className="text-start titles text-warning">Characters</h1>

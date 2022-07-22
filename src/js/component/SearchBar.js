@@ -1,6 +1,7 @@
 import React from "react";
 
-export const Search = () => {
+
+export const SearchBar = () => {
 	return (
     <div className="container">
         <nav className="row navbar searchNav">
@@ -13,6 +14,6 @@ export const Search = () => {
 	);
 };
 
-export default Search;
+export default SearchBar;
 
 
