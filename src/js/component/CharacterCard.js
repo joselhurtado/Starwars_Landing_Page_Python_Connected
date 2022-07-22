@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export default function CharacterCard() {
-    const {store} = useContext(Context); //Const to call store data from Flux (Actions is not used yet)
+    const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not used yet)
     const [characters, setCharacters] = useState([]); //UseState run the function from characters (API)
 
     useEffect(() => {
@@ -24,7 +24,7 @@ export default function CharacterCard() {
                         <Link to={`/character/${x.id}`} className="btn btn-warning">
                         Read More
                         </Link>
-                        <a href={"#"} className="btn btn-outline-warning fa fa-heart" />
+                        <a onClick={() => actions.addFavorites(x)} className="btn btn-outline-warning fa fa-heart" />
                         </div>
                     </div>
             </div>

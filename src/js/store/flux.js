@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				characterData: [],
 				planetData: [],
 				vehicleData: [],
+				favorites: [],
 		},
 		actions: {
 			getAllCharacters: async () => { //New Function to Call Characters
@@ -29,34 +30,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const payload = await response.json();
 				setStore({vehicleData:payload.results})
 			},
+
+			addFavorites: (item) => {   			//Favorites Function
+				const store = getStore();			//Access to the Store
+				store.favorites.push(item)			//Push Item
+				setStore(store)						//Save the Changes under Store (Update the State)
+			},
+
+			removeFavorites: (item) => {   			//Remove Favorites Function
+				const store = getStore();			
+				store.favorites.push(item)			
+				setStore(store)						
 			
 			//* ABOVE THIS LINE LIVES THE NEW API ACTIONS CALLING OBJECTS *//
-
-			
-
-			// Use getActions to call a function within a fuction (EXAMPLE)
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			}
 		}
 	};
 };
