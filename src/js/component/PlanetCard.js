@@ -10,7 +10,6 @@ export default function PlanetCard() {
 
     useEffect(() => {
         setplanets(store.planetData)
-        console.log(store.planetData, "store.planetData");
     }, [store.planetData] // In Here we call out again to keep stored the data on re-load the page
     )
 

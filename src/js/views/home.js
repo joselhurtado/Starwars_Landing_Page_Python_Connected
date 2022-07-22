@@ -34,7 +34,7 @@ export const Home = () => {
 
 			<div>
 				<br />
-				<h1 className="text-start titles text-warning">Vehicles</h1>
+				<h1 className="text-start titles text-warning">Starships</h1>
 				<hr />
 				<div>
 				<VehicleCard />
