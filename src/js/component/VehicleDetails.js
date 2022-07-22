@@ -3,7 +3,6 @@ import { Context } from "../store/appContext";
 import { useParams } from "react-router-dom";
 import Vehicles_0 from "/src/img/vehicles/Vehicles_0.jpeg";
 
-
 export default function VehicleDetails() {
     const {store} = useContext(Context);
     const params = useParams();
@@ -24,14 +23,14 @@ export default function VehicleDetails() {
         <br />
         <h1>{vehicle?.name}</h1>
         <hr />
-        <div className="card mb-3">
+        <div className="card mb-3 cardShapeSingle">
         <div className="row g-0">
             <div className="col-md-4 fillImage">
-            <img src={Vehicles_0} className="img-fluid rounded-start" alt="..." />
+            <img src={Vehicles_0} className="img-fluid shapeImageTopSingle" alt="..." />
             </div>
             <div className="col-md-8">
             <div className="card-body">
-                <h5 className="card-title text-dark">Card title</h5>
+                <h5 className="card-title text-light">Card title</h5>
                 <p className="card-text">height: 1.72</p>
                 <p className="card-text">mass: 73</p>
                 <p className="card-text">gender: male</p>

@@ -21,7 +21,7 @@ export const Hero = () => {
             <div className="carousel-caption d-none d-md-block m-4">
                 <h5>DARK VADER</h5>
                 <p>Some representative placeholder content for the first slide.</p>
-                <Link to="/">
+                <Link to="/character/4">
 				<span className="btn btn-warning" href="#" role="button">
 					Discover
 				</span>
@@ -34,7 +34,7 @@ export const Hero = () => {
             <div className="carousel-caption d-none d-md-block m-4">
                 <h5>YODA JEDI MASTER</h5>
                 <p>Some representative placeholder content for the second slide.</p>
-                <Link to="/">
+                <Link to="/character/20">
 				<span className="btn btn-warning" href="#" role="button">
 					Read More
 				</span>
@@ -45,9 +45,9 @@ export const Hero = () => {
             <div className="carousel-item">
             <img src={Hero3} className="d-block heroImage" alt="..." />
             <div className="carousel-caption d-none d-md-block m-4">
-                <h5>STORMTROOPERS</h5>
+                <h5>JAR JAR BINKS</h5>
                 <p>Some representative placeholder content for the third slide.</p>
-                <Link to="/">
+                <Link to="/character/36">
 				<span className="btn btn-warning" href="#" role="button">
 					Read More
 				</span>
