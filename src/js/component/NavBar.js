@@ -15,12 +15,7 @@ export const NavBar = () => {
 
 				<div className="dropdown">
 				<button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-    					<spam className="fa fa-heart"/> Favorites 
-							{() => store.favorites.length((index) => {
-								return(
-										<p className="text-info">{index}</p>
-								)
-							})}
+    					<spam className="fa fa-heart"/> {`Favorites (${store.favorites.length})`}
 						</button> {/* Display a Variable counting items inside of the store.favorites  */}
 						<div className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
 							{store.favorites.map((item, index) => {
