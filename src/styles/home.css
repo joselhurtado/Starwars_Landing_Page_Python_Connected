@@ -44,6 +44,7 @@ body {
 .titles {
     margin-top: 30px;
     margin-left: 15px;
+    text-transform: uppercase;
 }
 
 h1 {
@@ -155,7 +156,7 @@ hr {
 
 .card-title {
     font-family: 'Russo One', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     overflow: hidden; 
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -196,7 +197,7 @@ hr {
     color:#000 !important;
 }
 
-.btn.btn-outline-warning {
+.btn-outline-warning::after {
     background-color: #ffc107 !important;
     color:#000 !important;
 }
