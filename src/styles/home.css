@@ -155,7 +155,10 @@ hr {
 
 .card-title {
     font-family: 'Russo One', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .card-body {
@@ -163,10 +166,14 @@ hr {
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 1px !important;
+    margin-bottom: 20px !important;
 }
 
 .card-text {
     line-height: normal;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .footerContainer {
