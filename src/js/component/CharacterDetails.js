@@ -15,7 +15,6 @@ export default function SingleCharacterCard() {
             }
         })
         setCharacter(data);
-        console.log(character, "Character");
     },[store.characterData])
 
     return (
