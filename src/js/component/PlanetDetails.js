@@ -8,12 +8,13 @@ export default function PlanetDetails() {
     const {store} = useContext(Context);
     const params = useParams();
     const [planet, setPlanet] = useState({});
-    
+
     useEffect(() => {
         const data = store.planetData.find(item => {
             if(item.url[item.url.length-2] == params.theid){
                 return item;
             }
+            console.log("item")
         })
         setPlanet(data);
     },[store.planetData])
