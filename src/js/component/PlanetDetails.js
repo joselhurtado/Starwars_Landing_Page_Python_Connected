@@ -14,7 +14,6 @@ export default function PlanetDetails() {
             if(item.url[item.url.length-2] == params.theid){
                 return item;
             }
-            console.log("item")
         })
         setPlanet(data);
     },[store.planetData])
