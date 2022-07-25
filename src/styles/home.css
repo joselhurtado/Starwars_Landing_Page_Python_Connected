@@ -34,7 +34,7 @@ body {
 .fillImage img {
     object-fit: cover;
     min-width: 100%;
-    min-height: 100%
+    min-height: 100%;
 }
 
 .navbar {
@@ -57,6 +57,7 @@ h5 {
     font-family: 'Russo One', sans-serif;
     font-size: 2rem;
     color: #fff;
+    margin-top: 100px;
 }
 
 .NavLogo {
@@ -90,7 +91,6 @@ hr {
 .carousel-item {
     width: 100%;
     max-height: 425px !important;
-    
 }
 
 .heroImage {
@@ -99,6 +99,7 @@ hr {
     background-size: fill !important;
     position: relative;
     width: 100%;
+    filter: brightness(50%);
 }
 
 .cardShape {

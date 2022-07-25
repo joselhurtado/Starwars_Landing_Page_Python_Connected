@@ -16,15 +16,15 @@ export default function VehicleCard() {
     return (
         <div className="d-flex overflow-auto">{vehicles.length > 0 && vehicles.map((x,i) =>
             <div key={i} className="card m-2 cardShape" style={{minWidth: "18rem"}}>
-                <img src={Vehicles_0} className="card-img-top shapeImageTop" alt="card Image" />
+                <img src={require(`/src/img/vehicles/Vehicles_${x.name}.webp`).default} className="card-img-top shapeImageTop" alt="card Image" />
                     <div className="card-body text-light">
                         <h4 className="card-title">{x.name}</h4>
                         <p className="card-text">Model: {x.model}</p>  
                         <p className="card-text">Passengers: {x.passengers}</p>  
-                        <p className="card-text">Class: {x.vehicle_class}</p>
+                        <p className="card-text">Class: {x.starship_class}</p>
                         <br />                  
                         <div className="d-flex justify-content-between">
-                        <Link to={`/vehicle/${x.id}`} className="btn btn-warning">
+                        <Link to={`/vehicle/${x.url[x.url.length-2]}`} className="btn btn-warning">
                         Read More
                         </Link>
                         <a onClick={() => actions.addFavorites(x)} className="btn btn-outline-warning fa fa-heart" />

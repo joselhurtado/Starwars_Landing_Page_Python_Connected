@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
-import Planets from "/src/img/planets/Planets.jpeg";
 import { Link } from "react-router-dom";
-
 
 export default function PlanetCard() {
     const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not called yet)
@@ -16,7 +14,7 @@ export default function PlanetCard() {
     return (
         <div className="d-flex overflow-auto">{planet.length > 0 && planet.map((x,i) =>  
             <div key={i} className="card m-2 cardShape" style={{minWidth: "18rem"}}>
-                <img src={Planets} className="card-img-top shapeImageTop" alt="card Image" />
+                <img src={require(`/src/img/planets/Planets_${x.name}.webp`).default} className="card-img-top shapeImageTop" alt="Planet Image" />
                     <div className="card-body text-light">
                         <h4 className="card-title">{x.name}</h4>
                         <p className="card-text">Diameter: {x.diameter}</p>  

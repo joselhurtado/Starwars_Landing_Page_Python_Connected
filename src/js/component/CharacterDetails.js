@@ -20,7 +20,7 @@ export default function SingleCharacterCard() {
     return (
         <div className="container">
             <br />
-            <h1>{character?.name}</h1>
+            <h1 >{character?.name}</h1>
             <hr />
             <div className="card mb-3 cardShapeSingle">
             <div className="row g-0">

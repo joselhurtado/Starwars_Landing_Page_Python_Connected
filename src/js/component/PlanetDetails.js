@@ -5,7 +5,7 @@ import Planets from "/src/img/planets/Planets.jpeg";
 import { Link } from "react-router-dom";
 
 export default function PlanetDetails() {
-    const {store} = useContext(Context);
+    const {store, actions} = useContext(Context);
     const params = useParams();
     const [planet, setPlanet] = useState({});
 
@@ -26,7 +26,7 @@ export default function PlanetDetails() {
             <div className="card mb-3 cardShapeSingle">
             <div className="row g-0">
                 <div className="col-md-6 fillImage">
-                <img src={Planets} className="img-fluid shapeImageTopSingle" alt="planets Image" />
+                <img src={Planets} className="card-img-top shapeImageTopSingle" alt="Planet Image" />
                 </div>
                 <div className="col-md-6">
                 <div className="card-body text-light">

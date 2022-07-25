@@ -12,9 +12,9 @@ export const Home = () => {
 			<div>
 				<Hero />
 			</div>
-			<div>
+			{/* <div>
 				<SearchBar/>
-			</div>
+			</div> */}
 			<div>
 				<h1 className="text-start titles text-warning">Characters</h1>
 				<hr />
