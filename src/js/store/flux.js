@@ -31,7 +31,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getAllPlanets: async () => { 					//New Function to Call Planets
 				const response = await fetch(
-					'https://www.swapi.tech/api/planets/'
+					'https://swapi.py4e.com/api/planets'
 				);
 				const payload = await response.json();
 				setStore({planetData:payload.results})
