@@ -14,15 +14,15 @@ export const NavBar = () => {
 				</Link>
 
 				<div className="dropdown">
-				<button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-    					<spam className="fa fa-heart"/> {`Favorites (${store.favorites.length})`}
+				<button className="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+    					<span className="fa fa-heart"/> {`Favorites (${store.favorites.length})`}
 						</button> {/* Display a Variable counting items inside of the store.favorites  */}
 						<div className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
 							{store.favorites.map((item, index) => {
 								return(
 									<div key={index}>
 										<a className="align-middle dropdown-item">{item.name}
-										<spam onClick={() => actions.removeFavorites(index)}className="fa fa-trash"></spam></a>
+										<span onClick={() => actions.removeFavorites(index)}className="fa fa-trash"></span></a>
 										<li><hr className="dropdown-divider" /></li>
 									</div>
 								)

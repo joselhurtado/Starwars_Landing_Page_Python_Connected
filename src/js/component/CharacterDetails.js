@@ -51,8 +51,8 @@ export default function SingleCharacterCard() {
             <div className="d-flex justify-content-between p-2">
                 <Link to="/">
                 <div className="btn btn-warning">
-                    <spam className="fa fa-home"></spam>
-                    <spam>Back to Home</spam></div>
+                    <span className="fa fa-home"></span>
+                    <span>Back to Home</span></div>
 				</Link>
             </div>
         </div>
