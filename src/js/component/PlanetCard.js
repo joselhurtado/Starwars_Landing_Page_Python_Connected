@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
-import Planets_0 from "/src/img/planets/Planets_0.jpeg";
+import Planets from "/src/img/planets/Planets.jpeg";
 import { Link } from "react-router-dom";
 
 
@@ -16,7 +16,7 @@ export default function PlanetCard() {
     return (
         <div className="d-flex overflow-auto">{planet.length > 0 && planet.map((x,i) =>  
             <div key={i} className="card m-2 cardShape" style={{minWidth: "18rem"}}>
-                <img src={Planets_0} className="card-img-top shapeImageTop" alt="card Image" />
+                <img src={Planets} className="card-img-top shapeImageTop" alt="card Image" />
                     <div className="card-body text-light">
                         <h4 className="card-title">{x.name}</h4>
                         <p className="card-text">Diameter: {x.diameter}</p>  

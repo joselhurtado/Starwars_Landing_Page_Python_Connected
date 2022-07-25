@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import { useParams } from "react-router-dom";
-import Planets_0 from "/src/img/planets/Planets_0.jpeg";
+import Planets from "/src/img/planets/Planets.jpeg";
 import { Link } from "react-router-dom";
 
 export default function PlanetDetails() {
@@ -26,7 +26,7 @@ export default function PlanetDetails() {
             <div className="card mb-3 cardShapeSingle">
             <div className="row g-0">
                 <div className="col-md-6 fillImage">
-                <img src={Planets_0} className="img-fluid shapeImageTopSingle" alt="planets Image" />
+                <img src={Planets} className="img-fluid shapeImageTopSingle" alt="planets Image" />
                 </div>
                 <div className="col-md-6">
                 <div className="card-body text-light">
