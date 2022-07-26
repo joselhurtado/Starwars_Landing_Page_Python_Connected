@@ -2,11 +2,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 				characterData: [],
-				characterUrl: 'https://akabab.github.io/starwars-api/api/all.json',
+				characterQuery: 'https://akabab.github.io/starwars-api/api/all.json?name=${query}',
 				planetData: [],
-				planetURL: 'https://swapi.py4e.com/api/planets',
+				planetQuery: 'https://swapi.py4e.com/api/planets?name=${query}',
 				vehicleData: [],
-				vehiclesUrl: 'https://swapi.py4e.com/api/starships',
+				vehiclesQuery: 'https://swapi.py4e.com/api/starships?name=${query}',
 				favorites: [],
 		},
 		actions: {
@@ -17,17 +17,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const payload = await response.json();
 				setStore({characterData:payload})
 			},
-
-			// getAllPlanets: async () => {      			//Another Function Version to Call Planets
-			// 	const response = await fetch(
-			// 		"https://swapi.py4e.com/api/planets", {
-			// 			method: 'GET' 
-			// 		}).then(response => {
-			// 			return response.json()
-			// 		}).then(data => {
-			// 			setStore({planetData:data.results})
-			// 		})
-			// },
 
 			getAllPlanets: async () => { 					//New Function to Call Planets
 				const response = await fetch(

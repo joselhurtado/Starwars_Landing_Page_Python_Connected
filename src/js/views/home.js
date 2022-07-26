@@ -4,7 +4,7 @@ import CharacterCard from "/src/js/component/CharacterCard";
 import PlanetCard from "/src/js/component/PlanetCard";
 import VehicleCard from "/src/js/component/VehicleCard";
 import { Hero } from "/src/js/component/hero";
-import { SearchBar } from "/src/js/component/SearchBar";
+import Search from "../component/Search";
 
 export const Home = () => {
 	return (
@@ -12,9 +12,9 @@ export const Home = () => {
 			<div>
 				<Hero />
 			</div>
-			{/* <div>
-				<SearchBar/>
-			</div> */}
+			<div>
+				<Search getQuery={(q) => setQuery(q)} />
+			</div>
 			<div>
 				<h1 className="text-start titles text-warning">Characters</h1>
 				<hr />
