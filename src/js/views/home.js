@@ -5,16 +5,18 @@ import PlanetCard from "/src/js/component/PlanetCard";
 import VehicleCard from "/src/js/component/VehicleCard";
 import { Hero } from "/src/js/component/hero";
 import Search from "../component/Search";
+import Mandalorian from "../component/Mandalorian";
 
 export const Home = () => {
 	return (
 		<div className="container">
-			<div>
-				<Hero />
-			</div>
-			<div>
+			<h1 className='mandalorian'>StarWars DataBank</h1>
+				<div className="helmet container">
+					<Mandalorian />
+				</div>
+			{/* <div>
 				<Search getQuery={(q) => setQuery(q)} />
-			</div>
+			</div> */}
 			<div>
 				<h1 className="text-start titles text-warning">Characters</h1>
 				<hr />

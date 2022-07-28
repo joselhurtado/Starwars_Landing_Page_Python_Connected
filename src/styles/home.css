@@ -202,3 +202,27 @@ hr {
     background-color: #ffc107 !important;
     color:#000 !important;
 }
+
+/* Spline Styles */
+
+.helmet {
+    z-index: 1;
+    width: 100%;
+    height: 80%;
+    background-image: url("/src/img/mandalorian-background.webp") !important;
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mandalorian {
+    font-family: 'Russo One', sans-serif;
+    z-index: 2;
+    font-size: 72px;
+    color: #fff;
+    background-color: transparent;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
