@@ -10,7 +10,6 @@ import Mandalorian from "../component/Mandalorian";
 export const Home = () => {
 	return (
 		<div className="container">
-			<h1 className='mandalorian'>StarWars DataBank</h1>
 				<div className="helmet container-fluid">
 					<Mandalorian />
 				</div>
