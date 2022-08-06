@@ -1,4 +1,4 @@
-# StarWars LP Using React Router API, Flux and Context API
+# StarWars Landing Page Using React and Python API
 
 <img src="/src/img/StarWars_Using_React_RouterAPI.png">
 
